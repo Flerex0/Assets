@@ -1,12 +1,14 @@
+warn("executed")
 local messauge = Instance.new("Message", game.Workspace)
 messauge.Text = "loading"
-
+warn("loading")
 pcall(function() getgenv().IY_LOADED = true end)
 
 COREGUI = game:GetService("CoreGui")
 
 task.wait(10)
 messauge:Destroy()
+warn("loaded")
 
 currentVersion = '5.9.3'
 
