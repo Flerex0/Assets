@@ -1,18 +1,8 @@
-if IY_LOADED and not _G.IY_DEBUG == true then
-	-- error("Infinite Yield is already running!",0)
-	return
-end
-
 pcall(function() getgenv().IY_LOADED = true end)
 
 COREGUI = game:GetService("CoreGui")
-if not game:IsLoaded() then
-	local notLoaded = Instance.new("Message")
-	notLoaded.Parent = COREGUI
-	notLoaded.Text = 'Infinite Yield is waiting for the game to load'
-	task.wait(5)
-	notLoaded:Destroy()
-end
+
+task.wait(10)
 
 currentVersion = '5.9.3'
 
